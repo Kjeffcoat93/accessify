@@ -15,7 +15,9 @@
 		]
 	},
 	"scripts": {
-		"start": "tsup && node dist/server.js",
+ 		 "postinstall": "npx playwright install chromium",
+ 		 "start": "tsup && node dist/server.js"
+	}
 		"start:run": "node dist/server.js",
 		"format": "biome format --write ./src",
 		"prepare": "husky"
